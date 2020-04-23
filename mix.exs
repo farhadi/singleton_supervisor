@@ -4,7 +4,7 @@ defmodule SingletonSupervisor.MixProject do
   def project do
     [
       app: :singleton_supervisor,
-      version: "0.1.0",
+      version: "0.2.0",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
       description: description(),
@@ -17,7 +17,7 @@ defmodule SingletonSupervisor.MixProject do
 
   defp deps do
     [
-      {:ex_doc, "~> 0.19", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.21", only: :dev, runtime: false}
     ]
   end
 
