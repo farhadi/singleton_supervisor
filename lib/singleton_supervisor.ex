@@ -63,7 +63,7 @@ defmodule SingletonSupervisor do
     options = Keyword.put_new(options, :name, {:global, __MODULE__})
 
     with {:error, {:already_started, pid}} <- Supervisor.start_link(children, options) do
-      SingletonSupervisor.Placeholder.start_link(pid)
+      SingletonSupervisor.Placeholder.start_link(pid, options[:name])
     end
   end
 
@@ -71,7 +71,7 @@ defmodule SingletonSupervisor do
     options = Keyword.put_new(options, :name, {:global, module})
 
     with {:error, {:already_started, pid}} <- Supervisor.start_link(module, init_arg, options) do
-      SingletonSupervisor.Placeholder.start_link(pid)
+      SingletonSupervisor.Placeholder.start_link(pid, options[:name])
     end
   end
 

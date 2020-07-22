@@ -9,7 +9,7 @@ The package can be installed by adding `singleton_supervisor` to your list of de
 ```elixir
 def deps do
   [
-    {:singleton_supervisor, "~> 0.2.0"}
+    {:singleton_supervisor, "~> 0.2.1"}
   ]
 end
 ```
